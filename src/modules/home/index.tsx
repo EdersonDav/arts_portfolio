@@ -1,12 +1,13 @@
 import { decoracoes, pinturas } from '../../arts';
-import { Header, Gallery } from '../../components';
+import { FloatButton, Gallery, Hero } from '../../components';
 
 export function Main(): JSX.Element {
   return (
     <>
-      <Header />
+      <Hero />
       <Gallery id="pinturas" images={pinturas} title="Pinturas" />
       <Gallery id="decoracoes" images={decoracoes} title="Decorações" />
+      <FloatButton />
     </>
   );
 }

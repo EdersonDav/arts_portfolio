@@ -1,16 +1,21 @@
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Item, List, Nav, Title } from './style';
 
 export function Header(): JSX.Element {
   return (
-    <Container>
+    <Container className="wrapper">
       <Title>Laercio Silva</Title>
       <Nav>
         <List>
           <Item>
-            <a href="#">Artes</a>
+            <AnchorLink offset={100} href="#pinturas">
+              Pinturas
+            </AnchorLink>
           </Item>
           <Item>
-            <a href="#">Decorações</a>
+            <AnchorLink offset={100} href="#decoracoes">
+              Decorações
+            </AnchorLink>
           </Item>
         </List>
       </Nav>

@@ -1,7 +1,9 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { Gallery as Mosaic } from 'react-grid-gallery';
 import { useEffect, useState } from 'react';
-import { type IImage } from '../../types';
+import { type IGalleryImage, type IImage } from '../../types';
+import { galleryFactory } from '../../helpers';
+import { Container } from './styled';
 
 interface IGalleryProps {
   title: string;
@@ -9,34 +11,17 @@ interface IGalleryProps {
   images: IImage[];
 }
 
-interface IGalleryImage {
-  src: string;
-  width: number;
-  height: number;
-  alt: string;
-  isSelected: boolean;
-}
-
 export function Gallery({ images, title, id }: IGalleryProps): JSX.Element {
   const [gallery, setGallery] = useState<IGalleryImage[]>([]);
   useEffect(() => {
-    const newGallery = images.map((image) => {
-      return {
-        src: image.url,
-        width: image.largura,
-        height: image.altura,
-        alt: image.nome,
-        isSelected: true,
-      };
-    });
-
+    const newGallery = images.map(galleryFactory);
     setGallery(newGallery);
   }, [images]);
 
   return (
-    <section>
+    <Container className="wrapper">
       <h2 id={id}>{title}</h2>
       {gallery.length && <Mosaic images={gallery} />}
-    </section>
+    </Container>
   );
 }

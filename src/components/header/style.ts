@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  padding: 20px;
+  padding: 20px 0px;
   display: flex;
   align-items: baseline;
   height: 90px;
@@ -9,6 +9,12 @@ export const Container = styled.header`
   position: sticky;
   top: 0px;
   z-index: 1020;
+  background: var(--gray-black);
+  @media (max-width: 680px) {
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -17,10 +23,16 @@ export const Title = styled.h1`
   font-family: 'Caveat', cursive;
   text-transform: uppercase;
   width: max-content;
+  @media (max-width: 680px) {
+    font-size: 20px;
+  }
 `;
 
 export const Nav = styled.nav`
   margin-left: 50px;
+  @media (max-width: 680px) {
+    margin-left: 15px;
+  }
 `;
 
 export const List = styled.ul`
@@ -29,6 +41,9 @@ export const List = styled.ul`
   align-items: center;
   width: 100%;
   gap: 50px;
+  @media (max-width: 680px) {
+    gap: 15px;
+  }
 `;
 
 export const Item = styled.li`
@@ -37,9 +52,12 @@ export const Item = styled.li`
     font-weight: bold;
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1.5px;
-    font-style: italic;
+    text-decoration: underline;
     &:hover {
       color: var(--white);
+    }
+    @media (max-width: 680px) {
+      font-size: 14px;
     }
   }
 `;

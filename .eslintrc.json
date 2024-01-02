@@ -77,6 +77,8 @@
       "jsx-a11y/control-has-associated-label": "off",
       "react/jsx-no-useless-fragment":"off",
       "react-hooks/exhaustive-deps":"off",
-      "react/no-unstable-nested-components":"off"
+      "react/no-unstable-nested-components":"off",
+      "import/no-extraneous-dependencies":"off",
+      "import/no-cycle":"off"
     }
 }

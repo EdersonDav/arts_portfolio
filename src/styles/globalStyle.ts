@@ -31,7 +31,7 @@ const GlobalCSS = createGlobalStyle`
     body{
         background: var(--gray-black);
     }
-
+    html{scroll-behavior: smooth;}
     a, button{
         cursor: pointer;
         font-style: normal;
@@ -42,28 +42,26 @@ const GlobalCSS = createGlobalStyle`
     }
 
     .wrapper {
-        display: grid;
-        grid-template-columns: 1fr; /* Uma coluna que se expande para preencher o espaço disponível */
-        grid-gap: 20px; /* Espaçamento entre os elementos dentro do wrapper, ajuste conforme necessário */
-        max-width: 1200px; /* Largura máxima do wrapper */
-        margin: 0 auto; /* Centraliza o wrapper na página */
-        padding: 20px; /* Adiciona algum espaçamento interno, ajuste conforme necessário */
-    }
-
-    /* Exemplo de media query para tornar o layout responsivo */
-    @media screen and (min-width: 768px) {
-        .wrapper {
-            grid-template-columns: repeat(2, 1fr); /* Dois itens por linha em telas maiores que 768px */
-        }
-
-    }
-
-    @media screen and (min-width: 1024px) {
-        .wrapper {
-            grid-template-columns: repeat(3, 1fr); /* Três itens por linha em telas maiores que 1024px */
+        position: relative;
+        width: 100%;
+        max-width: 1420px;
+        box-sizing: border-box;
+        margin-right: auto;
+        margin-left: auto;
+        @media screen and (max-width: 1599px) {
+            max-width: 1180px;
+            @media screen and (max-width: 1220px) {
+                padding-right: 16px;
+                padding-left: 16px;
+            }
         }
     }
-    
+    .slick-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
 `;
 
 export default GlobalCSS;
