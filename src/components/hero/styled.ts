@@ -30,7 +30,7 @@ export const HeroContentLeft = styled.div`
   p {
     font-size: 1.3rem;
     margin-bottom: 10px;
-    color: var(--white);
+    color: ${(props) => props.theme.colors.primaryText};
     font-style: italic;
   }
 

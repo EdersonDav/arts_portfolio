@@ -26,16 +26,18 @@ const GlobalCSS = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         font-family: 'Rethink Sans', sans-serif;
-        color: var(--gray-2);
     }
     body{
-        background: var(--gray-black);
+        background: ${(props) => props.theme.colors.shape};
     }
     html{scroll-behavior: smooth;}
     a, button{
         cursor: pointer;
         font-style: normal;
         text-decoration: none;
+    }
+    a,h1,h2,h3,p,span{
+        color: ${(props) => props.theme.colors.text};
     }
     ul{
         list-style: none;
@@ -61,6 +63,16 @@ const GlobalCSS = createGlobalStyle`
         align-items: center;
         justify-content: center;
         height: 100%;
+    }
+
+    .custom-overlay__caption{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 10000;
+    }
+    [title="Select"]{
+        display: none;
     }
 `;
 

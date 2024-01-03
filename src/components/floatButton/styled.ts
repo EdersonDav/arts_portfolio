@@ -68,12 +68,6 @@ export const Container = styled.ul`
     visibility: visible;
     pointer-events: auto;
   }
-  & .icon:hover {
-    background-color: transparent;
-    svg {
-      fill: #fff;
-    }
-  }
 
   & .tooltip {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
@@ -114,11 +108,18 @@ export const Container = styled.ul`
     color: #ffffff;
   }
 
-  & .youtube:hover,
-  & .youtube:hover .tooltip,
-  & .youtube:hover .tooltip::before {
-    background: #fff;
-    color: #000;
+  & .tiktok:hover,
+  & .tiktok:hover .tooltip,
+  & .tiktok:hover .tooltip::before {
+    background: #000;
+    color: #fff;
+  }
+
+  & .pinterest:hover,
+  & .pinterest:hover .tooltip,
+  & .pinterest:hover .tooltip::before {
+    background: #cd201f;
+    color: #ffffff;
   }
 
   & .icon-whats {
@@ -146,6 +147,6 @@ export const Container = styled.ul`
   }
 
   & .icon-tiktok {
-    background: #cd201f;
+    background: #000;
   }
 `;

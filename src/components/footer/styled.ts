@@ -4,16 +4,16 @@ export const Container = styled.div`
   width: 100%;
   height: max-content;
   margin: 0;
-  background: var(--brown-rust);
+  background: ${(props) => props.theme.colors.headerFooter};
   padding: 20px 0 10px;
   position: relative;
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid ${(props) => props.theme.colors.primaryText};
 
   > strong {
     position: absolute;
     bottom: 15px;
     width: 100%;
-    color: var(--white);
+    color: ${(props) => props.theme.colors.primaryText};
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@ export const FooterContent = styled.div`
       > h2 {
         font-size: 20px;
         font-weight: 400;
-        color: var(--white);
+        color: ${(props) => props.theme.colors.primaryText};
         font-weight: 500;
       }
 
@@ -51,12 +51,12 @@ export const FooterContent = styled.div`
         align-items: center;
         margin: 10px 0;
         font-size: 1rem;
-        color: var(--white);
+        color: ${(props) => props.theme.colors.primaryText};
         svg {
           margin-right: 10px;
           font-size: 1.3rem;
           font-weight: bold;
-          fill: var(--white);
+          fill: ${(props) => props.theme.colors.primaryText};
         }
       }
 

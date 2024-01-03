@@ -15,7 +15,6 @@ export const Item = styled.div`
   h3 {
     font-size: 1.3rem;
     margin-top: 15px;
-    color: var(--gray-2);
     font-weight: 600;
     font-style: italic;
   }

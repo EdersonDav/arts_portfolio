@@ -1,24 +1,43 @@
 import styled from 'styled-components';
 
 export const Container = styled.header`
-  padding: 20px 0px;
-  display: flex;
-  align-items: baseline;
   height: 90px;
   overflow: hidden;
   position: sticky;
   top: 0px;
   z-index: 1020;
-  background: var(--gray-black);
+  background: ${(props) => props.theme.colors.headerFooter};
   @media (max-width: 680px) {
     align-items: center;
     justify-content: center;
     height: 50px;
   }
+  .switch {
+    float: right;
+    margin-right: 0;
+    margin-left: auto;
+    .react-switch-bg {
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+`;
+
+export const Content = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px 0px;
+  @media (max-width: 680px) {
+    padding: 0px 20px;
+  }
 `;
 
 export const Title = styled.h1`
-  color: var(--white);
+  color: ${(props) => props.theme.colors.primaryText};
   margin: 0;
   font-family: 'Caveat', cursive;
   text-transform: uppercase;
@@ -54,7 +73,7 @@ export const Item = styled.li`
     letter-spacing: 1.5px;
     text-decoration: underline;
     &:hover {
-      color: var(--white);
+      color: ${(props) => props.theme.colors.primaryText};
     }
     @media (max-width: 680px) {
       font-size: 14px;

@@ -6,4 +6,9 @@ export const medias: IMedias[] = [
     classN: 'instagram',
     url: 'https://www.instagram.com/laercio.arts/',
   },
+  {
+    name: 'Pinterest',
+    classN: 'pinterest',
+    url: 'https://br.pinterest.com/Laercioarts66/',
+  },
 ];

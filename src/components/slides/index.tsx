@@ -30,7 +30,7 @@ export function Slider(): JSX.Element {
       {images.length
         ? images.map((item) => (
             <Item key={generate()}>
-              <img src={item.url} alt={item.descricao} />
+              <img src={item.imagens[0].url} alt={item.descricao} />
               <h3>{item.nome}</h3>
             </Item>
           ))
